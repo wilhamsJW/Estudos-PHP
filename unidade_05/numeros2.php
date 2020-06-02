@@ -23,17 +23,17 @@
             echo "O $nome é um número?" . is_numeric($nome) . "</br>" . "</br>"; //O Wilhams é um número? , note q não retornou o 1
 
             // testar se é inteiro
-            echo "O $salario é um inteiro?" . is_int($salario) . "</br>";
-            echo "O $gasolina é um inteiro?" . is_int($gasolina) . "</br>" . "</br>"; 
+            echo "O $salario é um inteiro?" . is_int($salario) . "</br>"; //retorno = O 800 é um inteiro?1, note que retornou com o 1 no final, é tipo uma confirmação de true.
+            echo "O $gasolina é um inteiro?" . is_int($gasolina) . "</br>" . "</br>"; //retorno = O 2.5 é um inteiro?, retornou sem o 1 pq não é inteiro
 
             // testar se é float
-            echo "O $salario é float?" . is_float($salario) . "</br>";
-            echo "O $gasolina é float?" . is_float($gasolina) . "</br>" . "</br>";  
+            echo "O $salario é float?" . is_float($salario) . "</br>"; //O 800 é float?
+            echo "O $gasolina é float?" . is_float($gasolina) . "</br>" . "</br>"; //O 2.5 é float?1 
 
             echo "A gasolina será arrendonda para: " . round($gasolina) . "</br>"; //se tiver em 2.49 será arrendondado para 2 e a partir de 2.50 será arrendondado para 3
 
-            echo "Sempre arrendonda pra baixo: " . floor($gasolina2) . "</br>";
-            echo "Sempre arrendonda para cima: " . ceil($gasolina3) . "</br>";
+            echo "Sempre arrendonda pra baixo: " . floor($gasolina2) . "</br>";//Sempre arrendonda pra baixo: 2
+            echo "Sempre arrendonda para cima: " . ceil($gasolina3) . "</br>";//Sempre arrendonda para cima: 3
         ?>
         
         
