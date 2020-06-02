@@ -6,8 +6,13 @@
     </head>
 
     <body>
-       <p>
-         Minha primeira página
+       <!--Add código php a página-->
+       <p> <?php 
+          //este comentário não vai aparecer para quem for inspecionar seu código
+          /**posso comentar assim tbm */
+          echo "Wilhams Desenvolvedor" ?> 
        </p>
+       <p> <?php echo "Vamos Vencer o Corona Virús" ?> </p>
+       <p> <?php echo 2 * 2 ?> </p>
     </body>
 </html>
