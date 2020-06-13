@@ -32,20 +32,26 @@
                   */
 
                   //isset verfica se a var está configurada
-                 if (isset($_POST["nome"])) {
+                 if (isset($_POST["nome"])) {   //$nome = $_POST['nome'];    //este nome é nome dado na página do formulário, lá tem esse código: name="nome"
                        $nome = $_POST["nome"]; //se sim, então $nome vai ser igual á $_POST["name"]; quem é post? as informações de post estão sendo recebidas da página formulario, e nome está me trazendo o valor digitado pelo usuário 
                  } else { 
                        $nome = "Sem Definição"; 
                  }
-                 //$nome = $_POST['nome'];    //este nome é nome dado na página do formulário, lá tem esse código: name="nome"
+                 
+                 //Com esta única linha usando o operador ternário conseguir subsituir o código acima, o ? faz a pergunta do "se" se for true executará o código, os ":" é o "se não"
+                 //$nome = isset($_POST["nome"]) ? $_POST["nome"] : "Sem Definição";
 
-                 if (isset($_POST["email"])) {
+
+
+                 if (isset($_POST["email"])) { //$email = $_POST['email']; //este nome é nome dado na página do formulário, lá tem esse código: name="email"
                     $email = $_POST["email"]; 
               } else { 
                     $email = "Sem Definição"; 
               }
 
-                 //$email = $_POST['email']; //este nome é nome dado na página do formulário, lá tem esse código: name="email"
+               //Com esta única linha usando o operador ternário conseguir subsituir o código acima, o ? faz a pergunta do "se" se for true executará o código, os ":" é o "se não" 
+              //$email = isset($_POST["email"]) ? $_POST["email"] : "Sem Definição";
+                 
 
                  echo "Meu nome: " . $nome . "<br>";
                  echo "Meu email: " . $email ."<br";

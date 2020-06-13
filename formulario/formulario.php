@@ -13,7 +13,7 @@
         (poderia ser qq nome), method="post" é a forma que vai ser enviada, poderia se usar o get também, o get é
         como que vc fosse fazer uma url ou um link, os dados irão pelo navegador lá em cima na url, no get vc vê
         as informaçoes indo pelo navegador no endereço da url, já o método post vc não vê nada na url, isso é
-        indicado quando vc tá fazendo uma inserção no banco de dados e não quer que aquelas infirmações sejam
+        indicado quando vc tá fazendo uma inserção no banco de dados e não quer que aquelas informações sejam
         mostradas no navegador por questão de sigilo -->
 
         <form action="destino.php" method="post">
