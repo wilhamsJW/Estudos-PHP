@@ -37,13 +37,13 @@
         //Fazer uma consulta ao banco de dados
         
         //selecionando a tabela categorias /  WHERE categoriaID > 2 = me traga todas as categorias maior q 2
-        $consulta_categorias = "SELECT * FROM categorias WHERE categoriaID > 2";
+        //$consulta_categorias = "SELECT * FROM produtos WHERE categoriaID > 2";
 
-        /*outra forma, talvez mais organizada para executar a linha acima
-        $consulta_categorias = "SELECT *";
-        $consulta_categorias .= " FROM categorias " ;         //este ponto antes do igual .= siginifica a concatenação da var consulta_categorias 
+        //outra forma, talvez mais organizada para executar a linha acima
+        $consulta_categorias = "SELECT nomeproduto, tempoentrega";
+        $consulta_categorias .= " FROM produtos " ;         //este ponto antes do igual .= siginifica a concatenação da var consulta_categorias 
         $consulta_categorias .= " WHERE categoriaID > 2";    //note que há um espaço antes do FROM e WHERE, sem esse espaço dará erro, quando concateno preciso desse espaço ou ficará tudo junto e a máquin não irá entender
-        */
+        
 
         //fazendo a consulta via queries usando a api do mysqli, dentro dos () colocamos o nome da conexão e em seguida
         //o nome da consulta
@@ -66,6 +66,32 @@
 
     <body>
       
+      
+        <?php 
+
+        //Fazendo consulta e mostrando dados no browser
+
+        /**mysql_fetch_row() obtém uma linha de dados do resultado associado ao identificador do resultado 
+         * especificado. A linha é retornada como um array. Cada coluna do resultado é armazenado em um índice do 
+         * array, começando no índice 0. */
+
+                //o while percorrerá todos os campos e me trará tudo o que eu pedir
+                /*
+                while ($registro = mysqli_fetch_row($categorias)) {
+                    print_r($registro);
+                    echo "<br>"; //Array ( [0] => 3 [1] => Merchandise )
+                }
+                */
+
+                //agora vamos usar o arrary associative, isso me trará uma especificação a mais sobre minha tabela
+                while ($registro = mysqli_fetch_assoc($categorias)) {
+                    print_r($registro);
+                    echo "<br>"; //Array ( [categoriaID] => 3 [nomecategoria] => Merchandise )
+                }    
+                   
+        
+        ?>
+        
     </body>
 </html>
 
