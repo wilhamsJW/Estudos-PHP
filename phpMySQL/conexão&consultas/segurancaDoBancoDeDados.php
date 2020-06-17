@@ -1,4 +1,19 @@
 <?php 
+
+
+     /**Informação sobre segurança do banco de dados (este código abaixo está no arquivo conexaoMySQL.php)
+      * Note que todo este código abaixo está dentro da pasta junto com todos os arquivos do site (suponhamos
+      que isso seja um site), então informações do meu banco de dados estão expostas nessa pasta, o ideal é 
+      protegermos, como? (1) Crie uma pasta  fora da pasta do contéudo do site e cole este código da conexão com
+      o banco de  dados dentro dela (2) após ter criado a pasta e ter retirado essas informações daqui, faça um
+      requerimento dessa informações para sua página por usar o require_once (vimos sobre ele nessas pastas de estudos)
+      dessa forma: <?php require_once("conexao"); ?>   conexao é a pasta criada com as informações do banco de dados
+      estou usando o require para fazer essa conexão da minha página com o banco de dados
+      */
+
+
+
+
      /**Como criar uma conexão MySQL?
       * Passo 1 -> crie uma var e atribua qq nome, vamos chamar de conect
         Passo 2 -> vamo utilizar a api mysqli_connect, ficará dessa forma $conecta = mysqli_connect("", "", "", "")

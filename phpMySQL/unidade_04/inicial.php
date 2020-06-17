@@ -11,26 +11,21 @@
     </head>
 
     <body>
-        <header>
-            <div id="header_central">
-                <img src="assets/logo_andes.gif">
-                <img src="assets/text_bnwcoffee.gif">
-            </div>
-        </header>
+      <!--Isto é OTIMIZAÇÃO do código-->
+      <!--include_once("_incluir/topo.php") => são arquivos dessa mesma pasta, de forma 
+      dinamica consigo alterar o topo e o rodape de todas as páginas do meu site, sem a 
+      necesidade de tá colocando o mesmo código em várias páginas, ficando um código otimizado-->
+      <?php include_once("_incluir/topo.php"); ?>
         
         <main>  
             
         </main>
 
-        <footer>
-            <div id="footer_central">
-                <p>ANDES &eacute; uma empresa fict&iacute;cia, usada para o curso PHP Integra&ccedil;&atilde;o com MySQL.</p>
-            </div>
-        </footer>
+        <?php include_once("_incluir/rodape.php"); ?>
     </body>
 </html>
 
 <?php
     // Fechar conexao
-    mysqli_close($conecta);
+    //mysqli_close($conecta);
 ?>
